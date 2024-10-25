@@ -1,0 +1,77 @@
+<!-- res/layout/register_item.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="2dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:background="#F1F1F1"
+        tools:ignore="UselessParent">
+
+        <ImageView
+            android:layout_width="40dp"
+            android:id="@+id/imageViewDetails"
+            android:src="@drawable/ic_register"
+            android:layout_height="match_parent"
+            android:layout_marginEnd="3dp"
+            tools:ignore="ContentDescription" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textViewName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/textViewImc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/textViewMuac"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"/>
+
+
+            <TextView
+                android:id="@+id/textViewDni"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/textStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:id="@+id/imageViewDelete"
+            android:src="@drawable/ic_delete"
+            android:layout_height="match_parent"
+            android:layout_marginStart="3dp"
+            tools:ignore="ContentDescription"/>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

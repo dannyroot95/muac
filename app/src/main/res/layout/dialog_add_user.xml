@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- res/layout/dialog_add_user.xml -->
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/editTextFirstName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombres" />
+
+            <EditText
+                android:id="@+id/editTextLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellido paterno" />
+
+            <EditText
+                android:id="@+id/editTextMaternalLastName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Apellido materno" />
+
+            <EditText
+                android:id="@+id/editTextDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DNI"
+                android:inputType="number" />
+
+            <RadioGroup
+                android:id="@+id/radioGroupSex"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioButtonMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Masculino" />
+
+                <RadioButton
+                    android:id="@+id/radioButtonFemale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Femenino" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/editTextBirthdate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de nacimiento"
+                android:inputType="date" />
+
+            <Spinner
+                android:id="@+id/spinnerCommunity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/editTextGuardianDNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="DNI Apoderado"
+                android:inputType="number" />
+
+            <EditText
+                android:id="@+id/editTextGuardianName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre completo del apoderado" />
+
+            <EditText
+                android:id="@+id/editTextHistory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Historia" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

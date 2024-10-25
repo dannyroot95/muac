@@ -1,0 +1,45 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.MainActivity">
+
+    <!-- AppBarLayout con TabLayout -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorColor="@color/teal_200"
+            app:tabSelectedTextColor="@color/teal_200"
+            app:tabTextColor="@android:color/black"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- ViewPager2 que maneja los fragmentos -->
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    <!-- FloatingActionButton dentro del CoordinatorLayout -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_wifi"
+        app:tint="@null"
+        android:clickable="true"
+        app:backgroundTint="@color/blue"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/viewPager"
+        app:layout_anchorGravity="bottom|end"
+        android:elevation="8dp" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

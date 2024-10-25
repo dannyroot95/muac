@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "796832000824",
+    "project_id": "muac-f80bb",
+    "storage_bucket": "muac-f80bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:796832000824:android:99ec3f7315f4d8fa312fcd",
+        "android_client_info": {
+          "package_name": "com.electric.muac"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBcjjdqZyMgyGFI0xLHJN1reRDunptv9F4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

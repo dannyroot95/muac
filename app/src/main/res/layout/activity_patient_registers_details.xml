@@ -1,0 +1,187 @@
+<!-- Layout de la Activity, por ejemplo activity_patient_registers_details.xml -->
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitys.PatientRegistersDetailsActivity">
+
+    <!-- AppBarLayout para contener la Toolbar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.MUAC.AppBarOverlay">
+
+        <!-- Toolbar que actúa como la ActionBar de la Activity -->
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.MUAC.PopupOverlay">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:id="@+id/back"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/ic_arrow_back"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Titulo"
+                android:fontFamily="sans-serif-light"
+                android:textSize="18sp"
+                android:textColor="@android:color/white" />
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Contenedor principal para otros componentes de la UI -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_marginTop="?attr/actionBarSize"> <!-- Asegura que el LinearLayout no se solape con la AppBar -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Registro nutricional"
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="#BABABA"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="DNI"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/textPatientDni"
+                    android:inputType="number"
+                    android:textColor="@color/black"
+                    android:enabled="false"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"/>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="Edad"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/edtAge"
+                    android:enabled="false"
+                    android:textColor="@color/black"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="Peso"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/edtWeight"
+                    android:inputType="numberDecimal"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="10dp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:hint="Estatura"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:fontFamily="sans-serif-light"
+                    android:id="@+id/edtSize"
+                    android:inputType="number"
+                    android:layout_height="wrap_content"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="Medicion de la cinta MUAC"
+            android:textSize="18sp"
+            android:padding="8dp" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.electric.muac.Activitys.Utils.RulerView
+                android:id="@+id/rulerView"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_above="@id/seekBar"/>
+
+            <SeekBar
+                android:id="@+id/seekBar"
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:max="0"
+                android:progress="130"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/saveButton"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:drawableLeft="@drawable/ic_save"
+            android:layout_height="wrap_content"
+            android:text="Guardar"
+            android:textColor="@color/blue"
+            android:fontFamily="sans-serif-light"
+            app:cornerRadius="15dp"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+            />
+
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
